@@ -58,13 +58,14 @@ public class NameListPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         contactList = new javax.swing.JList<String>();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("CONTACTS");
 
+        contactList.setBackground(new java.awt.Color(255, 0, 0));
         contactList.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }

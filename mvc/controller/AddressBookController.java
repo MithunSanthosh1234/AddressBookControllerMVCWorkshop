@@ -58,12 +58,15 @@ public class AddressBookController {
                     openEdit();
                 else if(e.getSource() == view.getDelete())
                     openDelete();
+                else if(e.getSource() == view.getSearch())
+                    openSearch();
             }
         };
         
         view.getAdd().addActionListener(actionListener);
         view.getDelete().addActionListener(actionListener);
         view.getEdit().addActionListener(actionListener);
+        view.getSearch().addActionListener(actionListener);
       
     }
     
@@ -155,6 +158,10 @@ public class AddressBookController {
                
     }
     
+     private void openSearch(){
+         
+         JOptionPane.showMessageDialog(new JFrame(), "Yet to incorporate this features","Inane error", JOptionPane.ERROR_MESSAGE);
+     }
      
     private void openEdit(){
         dialog =  new ContactDialog("Update Entries");
@@ -162,6 +169,7 @@ public class AddressBookController {
         dialog.getPanel().setName(detailPanel.getNameField().getText());
         dialog.getPanel().setMobile(detailPanel.getMobileField().getText());
         dialog.getPanel().seteMail(detailPanel.geteMailField().getText());
+        dialog.getPanel().setAddress(detailPanel.getAddressField().getText());
         
         view.getMainGUIFrame().setVisible(false);
         choiceListener = new ActionListener() {
@@ -174,7 +182,7 @@ public class AddressBookController {
                 String name = contactDetailsPanel.getNameField().getText();
                 String mobile = contactDetailsPanel.getMobileField().getText();
                 String email = contactDetailsPanel.geteMailField().getText();  
-                 String address = contactDetailsPanel.getAddressField().getText();
+                String address = contactDetailsPanel.getAddressField().getText();
                 flag = validate();
                 if(flag)
                 {    
@@ -240,6 +248,7 @@ public class AddressBookController {
          detailPanel.getNameField().setEditable(false);
          detailPanel.getMobileField().setEditable(false);
          detailPanel.geteMailField().setEditable(false);
+         detailPanel.getAddressField().setEditable(false);
         }
     }  //loadPersons ends
     

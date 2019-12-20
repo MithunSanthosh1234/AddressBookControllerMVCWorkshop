@@ -94,7 +94,7 @@ public class DetailViewPanel extends javax.swing.JPanel {
             }
         });
 
-        setBackground(new java.awt.Color(204, 102, 255));
+        setBackground(new java.awt.Color(255, 255, 102));
 
         jLabel1.setBackground(new java.awt.Color(128, 128, 128));
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
